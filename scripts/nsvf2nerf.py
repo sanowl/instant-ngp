@@ -45,7 +45,7 @@ if __name__ == "__main__":
 	img_files[0] = sorted(glob.glob(os.path.join(IMAGE_FOLDER, "rgb", f"0_*.png")))
 	img_files[1] = sorted(glob.glob(os.path.join(IMAGE_FOLDER, "rgb", f"1_*.png")))
 	img_files[2] = sorted(glob.glob(os.path.join(IMAGE_FOLDER, "rgb", f"2_*.png")))
-	xx = open("bbox.txt").readline().strip().split(" ")
+	xx = open("bbox.txt").readline(5_000_000).strip().split(" ")
 	xx = [x for x in xx if x] # remove empty elements
 	bbox = tuple(map(float,xx))
 
